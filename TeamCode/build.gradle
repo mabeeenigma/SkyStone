@@ -11,5 +11,22 @@
 
 // Custom definitions may go here
 
+apply plugin: 'com.android.application'
+
 // Include common definitions from above.
 apply from: '../build.common.gradle'
+
+android {
+
+// added java 1.8 compatability request to the common build.common.gradle file
+// uncomment the below if a problem is found with that being the higher level file that applies
+// to the whole project. The compatibility is just needed for Robomatic
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+
+    sourceSets {
+        main.java.srcDirs += '../../mentors-skystone/src'
+    }
+}
