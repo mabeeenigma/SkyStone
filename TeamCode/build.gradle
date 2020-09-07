@@ -11,6 +11,8 @@
 
 // Custom definitions may go here
 
+apply plugin: 'com.android.application'
+
 // Include common definitions from above.
 apply from: '../build.common.gradle'
 
@@ -21,3 +23,6 @@ repositories {
 dependencies {
     annotationProcessor files('lib/OpModeAnnotationProcessor.jar')
 }
+    sourceSets {
+        main.java.srcDirs += '../../mentors-skystone/src'
+    }
