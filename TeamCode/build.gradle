@@ -23,6 +23,9 @@ repositories {
 dependencies {
     annotationProcessor files('lib/OpModeAnnotationProcessor.jar')
 }
+
+android {
     sourceSets {
         main.java.srcDirs += '../../mentors-skystone/src'
     }
+}
